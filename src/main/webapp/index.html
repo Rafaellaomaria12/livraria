@@ -1,10 +1,73 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+
+<Style>
+    /* css->Cascade style sheet(cascata estilo folha) */
+    body{
+        text-align: center;
+    }
+    img{
+        width: 100px;
+        height: 100px;
+        margin: 20px;
+    }
+    form{
+        width: 20%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    label{
+        font-family: verdana;
+        font-size: 11pt;
+        font-weight: bold;
+        display: block;
+        text-align: left;
+    }
+    input{
+        width: 100%;
+        padding: 10px;
+        display: block;
+        margin-bottom: 20px;
+    }
+    input[type=submit]{
+        background-color: blanchedalmond;
+        color: black;
+        width: 150px;
+        font-family: verdana;
+        font-size: 12pt;
+        margin-left: auto;
+        margin-right: auto;
+        border: 0px;
+        cursor: pointer;
+    }
+    a{
+        font-family: verdana;
+        text-decoration: none;
+        color: blue;
+        text-transform: uppercase;
+        font-size: 8pt;
+        font-weight: bold;
+    }
+
+</Style>
+
 </head>
 <body>
-	<h1>Página de teste</h1>
+    <img src="usuario.png" alt="">
+    <form action="ServiceLogin" method="post">
+        <label>Usuário</label>
+        <input type="text" name="txtusuario" required>
+
+        <label>Senha</label>
+        <input type="password" name="txtsenha" required>
+
+        <input type="submit" value="Logar">
+        <a href="cadastrousuario.html"> Cadastrar </a>
+
+    </form>
 </body>
 </html>

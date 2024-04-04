@@ -84,13 +84,13 @@ public class DAOUsuario extends Conexao implements CRUDUsuario<Usuario>{
 				
 				while(rs.next()) {
 					Usuario us = new Usuario();
-					us.setIdusuario(rs.getInt(0));
-					us.setNomeusuario(rs.getString(1));
-					us.setSenha(rs.getString(2));
-					us.setEmail(rs.getString(3));
-					us.setTelefone(rs.getString(4));
-					us.setNomecompleto(rs.getString(5));
-					us.setCpf(rs.getString(6));
+					us.setIdusuario(rs.getInt(1));
+					us.setNomeusuario(rs.getString(2));
+					us.setSenha(rs.getString(3));
+					us.setEmail(rs.getString(4));
+					us.setTelefone(rs.getString(5));
+					us.setNomecompleto(rs.getString(6));
+					us.setCpf(rs.getString(7));
 					
 					lista.add(us);
 				}
@@ -131,13 +131,13 @@ public class DAOUsuario extends Conexao implements CRUDUsuario<Usuario>{
 				
 				if(rs.next()) {
 					
-					us.setIdusuario(rs.getInt(0));
-					us.setNomeusuario(rs.getString(1));
-					us.setSenha(rs.getString(2));
-					us.setEmail(rs.getString(3));
-					us.setTelefone(rs.getString(4));
-					us.setNomecompleto(rs.getString(5));
-					us.setCpf(rs.getString(6));
+					us.setIdusuario(rs.getInt(1));
+					us.setNomeusuario(rs.getString(2));
+					us.setSenha(rs.getString(3));
+					us.setEmail(rs.getString(4));
+					us.setTelefone(rs.getString(5));
+					us.setNomecompleto(rs.getString(6));
+					us.setCpf(rs.getString(7));
 					
 					
 				}
