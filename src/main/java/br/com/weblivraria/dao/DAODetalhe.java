@@ -40,6 +40,7 @@ public class DAODetalhe extends Conexao implements CRUDLivraria<DetalhePedido>{
 			fecharConexao();
 		}
 		return msg;
+		
 	}
 
 	@Override
