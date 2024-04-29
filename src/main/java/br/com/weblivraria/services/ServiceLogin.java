@@ -37,7 +37,6 @@ public class ServiceLogin extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String usuario = request.getParameter("txtusuario");
 		String senha = request.getParameter("txtsenha");
-		response.getWriter().write(usuario+" | "+senha);
 		
 		Usuario us = new Usuario();
 		us.setNomeusuario(usuario);

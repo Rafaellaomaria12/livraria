@@ -11,9 +11,6 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
-/**
- * Servlet implementation class ServiceUsuario
- */
 public class ServiceUsuario extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
@@ -22,7 +19,7 @@ public class ServiceUsuario extends HttpServlet {
      */
     public ServiceUsuario() {
         super();
-        // TODO Auto-generated constructor stub
+    
     }
 
 	/**
@@ -35,14 +32,14 @@ public class ServiceUsuario extends HttpServlet {
 				+ "<head>\r\n"
 				+ "    <meta charset=\"UTF-8\">\r\n"
 				+ "    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\r\n"
-				+ "    <title>Usuários Cadastrados</title>\r\n"
+				+ "    <title>Usu�rios Cadastrados</title>\r\n"
 				+ "\r\n"
 				+ "    <style>\r\n"
 				+ "        h1{\r\n"
 				+ "            font-family: arial;\r\n"
 				+ "            font-size: 30pt;\r\n"
 				+ "            text-align: center;\r\n"
-				+ "            color: black;\r\n"
+				+ "            color:black\r\n"
 				+ "        }\r\n"
 				+ "        #estrutura{\r\n"
 				+ "            width: 60%;\r\n"
@@ -50,12 +47,11 @@ public class ServiceUsuario extends HttpServlet {
 				+ "            margin-right: auto;\r\n"
 				+ "            display:flex;\r\n"
 				+ "            flex-wrap:wrap;\r\n"
-				+ "\r\n"
 				+ "        }\r\n"
 				+ "        .dp img{\r\n"
 				+ "            width: 24px;\r\n"
 				+ "            height: 24px;\r\n"
-				+ "            margin: 5px;\r\n"
+				+ "            margin:5px;\r\n"
 				+ "        }\r\n"
 				+ "        .dc img{\r\n"
 				+ "            width: 16px;\r\n"
@@ -63,21 +59,20 @@ public class ServiceUsuario extends HttpServlet {
 				+ "            margin: 5px;\r\n"
 				+ "        }\r\n"
 				+ "        .us{\r\n"
-				+ "            background-color: coral;\r\n"
-				+ "            padding: 10px;\r\n"
+				+ "            background-color: #e1f5fe;\r\n"
+				+ "            padding:10px;\r\n"
 				+ "            width: 250px;\r\n"
-				+ "            border-radius: 10px;\r\n"
+				+ "            border-radius: 5px;\r\n"
 				+ "            transition: ease 0.5s;\r\n"
 				+ "            margin:10px;\r\n"
 				+ "        }\r\n"
 				+ "        .us:hover{\r\n"
-				+ "            background-color: chocolate;\r\n"
-				+ "            box-shadow: 0px 0px 5px black;\r\n"
-				+ "            transform: scale(1.1);\r\n"
+				+ "            background-color: #b3e5fc;\r\n"
 				+ "        }\r\n"
+				+ "\r\n"
 				+ "        h2{\r\n"
 				+ "            font-family: arial;\r\n"
-				+ "            font-size: 12pt;\r\n"
+				+ "            font-size:12pt;\r\n"
 				+ "        }\r\n"
 				+ "        .dp{\r\n"
 				+ "            display: flex;\r\n"
@@ -94,32 +89,31 @@ public class ServiceUsuario extends HttpServlet {
 				+ "\r\n"
 				+ "    </style>\r\n"
 				+ "\r\n"
-				+ "\r\n"
 				+ "</head>\r\n"
 				+ "<body>\r\n"
-				+ "    <h1>Usuários Cadastrados</h1>\r\n"
+				+ "    <h1>Usu�rios Cadastrados</h1>\r\n"
 				+ "    <div id=\"estrutura\">\r\n"
 				+ "\r\n"
 				;
 		
-		String conteudo = "";
-			
+		String conteudo = "";		
+		
 		
 		DAOUsuario daous = new DAOUsuario();
 		List<Usuario> lista = new ArrayList<Usuario>();
 		lista = daous.listar();
-		for(int i  = 0 ; i < lista.size() ; i++) {
+		for( int i = 0 ; i < lista.size() ; i++) {
 			conteudo+="        <div class=\"us\">\r\n"
 					+ "            <div class=\"dp\">\r\n"
-					+ "                <img src=\"usuario.png\" alt=\"\">\r\n"
+					+ "                <img src=\"user.png\" alt=\"\">\r\n"
 					+ "                <h2>"+lista.get(i).getNomecompleto()+"</h2>\r\n"
 					+ "                <a href=\"atualizar.html\">\r\n"
-					+ "                    <img src=\"editar.png\" alt=\"\">\r\n"
+					+ "                    <img src=\"edit.png\" alt=\"\">\r\n"
 					+ "                </a>\r\n"
 					+ "            </div>\r\n"
 					+ "\r\n"
 					+ "            <div class=\"dc\">\r\n"
-					+ "                <div><img src=\"telefone.png\" alt=\"\">"+lista.get(i).getTelefone()+"</div>\r\n"
+					+ "                <div><img src=\"phone.png\" alt=\"\"> "+lista.get(i).getTelefone()+"</div>\r\n"
 					+ "                <div><img src=\"email.png\" alt=\"\">"+lista.get(i).getEmail()+"</div>\r\n"
 					+ "            </div>\r\n"
 					+ "\r\n"
@@ -149,10 +143,10 @@ public class ServiceUsuario extends HttpServlet {
 		String nome = request.getParameter("txtnome");
 		String cpf = request.getParameter("txtcpf");
 		
-		//instância da classe Usuario que está no dominio
+		//inst�ncia da classe Usuario que est� no dominio
 		Usuario us = new Usuario();
 		DAOUsuario ds = new DAOUsuario();
-		//Passagem dos dados enviados pelo usuário a camada dominio
+		//Passagem dos dados enviados pelo usu�rio a camada dominio
 		us.setNomeusuario(usuario);
 		us.setSenha(senha);
 		us.setEmail(email);
@@ -174,3 +168,17 @@ public class ServiceUsuario extends HttpServlet {
 	}
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
